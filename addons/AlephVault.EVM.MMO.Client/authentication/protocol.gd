@@ -47,7 +47,7 @@ func make_signed_siwe_payload(address: String = "") -> Dictionary:
 			return {}
 		account = str(accounts[0])
 
-	var expiration_time := int(Time.get_unix_time_from_system()) + max(1, expiration_seconds)
+	var expiration_time: int = int(Time.get_unix_time_from_system()) + max(1, expiration_seconds)
 	var payload := Siwe.make_payload(siwe_domain, account, chain_id, expiration_time)
 	var typed_data := Siwe.make_typed_data(payload)
 	var sign_response: Dictionary
