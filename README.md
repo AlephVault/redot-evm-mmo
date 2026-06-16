@@ -28,10 +28,11 @@ using this add-on:
 ## Samples
 
 The fake TIME protocol sample is under
-`addons/AlephVault.EVM.MMO.Samples/scenes/time/`. Start
-`time-server.tscn`, connect with `time-client.tscn`, and assign an unlocked EVM
-wallet/provider to the client before login. After SIWE-like authentication, the
-server replies with:
+`addons/AlephVault.EVM.MMO.Samples/scenes/time/`. Start `time-server.tscn`,
+then open `time-client.tscn`. The client creates an `AlephVault__EVM.Web3Client`,
+opens `AlephVault__EVM.UI.WalletModal` for native wallets, and injects the ready
+wallet into the SIWE-like auth protocol before connecting. After authentication,
+the server replies with:
 
 ```text
 Hello 0x..., the current time is yyyy-mm-dd HH:MM:SS
