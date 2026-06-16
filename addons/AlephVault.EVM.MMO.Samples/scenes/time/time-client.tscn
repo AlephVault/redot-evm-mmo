@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://addons/AlephVault.EVM.MMO.Samples/scripts/time/time-client-main.gd" id="1_client"]
+[ext_resource type="Script" path="res://addons/AlephVault.EVM.MMO.Samples/scripts/time/time-auth-client-protocol.gd" id="2_auth"]
+
+[node name="TimeClient" type="Node"]
+script = ExtResource("1_client")
+
+[node name="Authentication" type="Node" parent="."]
+script = ExtResource("2_auth")
